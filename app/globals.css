@@ -635,28 +635,3 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
-
-.navbar-phone {
-  margin-left: 20px;
-  color: var(--navy);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.navbar-phone-mobile {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .navbar-phone {
-    display: none;
-  }
-
-  .navbar-phone-mobile {
-    display: inline-block;
-    margin-left: 12px;
-    color: var(--navy);
-    text-decoration: none;
-    font-weight: 700;
-  }
-}

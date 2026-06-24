@@ -21,7 +21,7 @@ export default function Home() {
             Book A Consultation
           </a>
           <p className="hero-contact">
-            Prefer a direct conversation? <a href="tel:+18324034664">(832) 403-4664</a>
+            Questions before scheduling? Call or text <a href="tel:+18324034664">(832) 403-4664</a>
           </p>
         </div>
       </main>
@@ -46,7 +46,7 @@ export default function Home() {
       </h2>
 
       <h3>
-        Founder, MGT Estates
+        Principal, MGT Estates
       </h3>
 
       <p>

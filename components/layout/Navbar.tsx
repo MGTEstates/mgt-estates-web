@@ -16,9 +16,6 @@ export default function Navbar() {
           <a href="/homes">Homes</a>
         </nav>
 
-        <a href="tel:+18324034664" className="navbar-phone">
-          (832) 403-4664
-        </a>
 
         <a href="/consultation" className="nav-button">
           Book Consultation
@@ -28,9 +25,7 @@ export default function Navbar() {
           ☰
         </button>
 
-        <a href="tel:+18324034664" className="navbar-phone-mobile">
-          Call Now (832) 403-4664
-        </a>
+        {/* phone moved to hero/footer/consultation per design — keep navbar minimal */}
 
       </div>
     </header>
