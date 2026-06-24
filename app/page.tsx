@@ -1,21 +1,6 @@
 export default function Home() {
   return (
     <>
-      <nav className="navbar">
-        <div className="logo">MGT ESTATES</div>
-
-        <div className="nav-links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">How I Work</a>
-          <a href="#">Homes</a>
-        </div>
-
-        <a href="#" className="btn-primary">
-          Book Consultation
-        </a>
-      </nav>
-
       <main className="hero">
         <div className="hero-container">
           <p className="hero-eyebrow">
@@ -44,7 +29,7 @@ export default function Home() {
 
     <div className="about-image">
       <img
-        src="/michael-thomson.jpg"
+        src="/images/michael-thomson.jpg"
         alt="Michael Thomson"
       />
     </div>
@@ -86,6 +71,7 @@ export default function Home() {
 
   </div>
 </section>
+<div className="section-divider"></div>
 <section className="process-section">
 
   <div className="process-container">
@@ -159,6 +145,7 @@ export default function Home() {
   </div>
 
 </section>
+<div className="section-divider"></div>
 <section className="fit-section">
 
   <div className="fit-container">
@@ -174,34 +161,23 @@ export default function Home() {
     <div className="fit-grid">
 
       <div className="fit-card">
-
-        <h3>
-          Clients Seeking Representation,
-          Not Pressure
-        </h3>
-
-        <p>
-          MGT Estates is designed for clients who
-          value informed guidance, clear communication,
-          and disciplined execution over transactional
-          sales tactics.
-        </p>
-
+        <h3>Luxury Buyers</h3>
       </div>
 
       <div className="fit-card">
+        <h3>Strategic Sellers</h3>
+      </div>
 
-        <h3>
-          Buyers & Sellers Who Prioritize Strategy
-        </h3>
+      <div className="fit-card">
+        <h3>Relocation Clients</h3>
+      </div>
 
-        <p>
-          The advisory process is best suited for
-          clients who appreciate preparation,
-          market positioning, and long-term
-          decision quality.
-        </p>
+      <div className="fit-card">
+        <h3>Investors</h3>
+      </div>
 
+      <div className="fit-card">
+        <h3>Private Clients</h3>
       </div>
 
     </div>
@@ -209,6 +185,7 @@ export default function Home() {
   </div>
 
 </section>
+<div className="section-divider"></div>
 <section className="cta-section">
 
   <div className="cta-container">
@@ -234,51 +211,6 @@ export default function Home() {
   </div>
 
 </section>
-<footer className="footer">
-
-  <div className="footer-container">
-
-    <div className="footer-brand">
-
-      <h3>MGT Estates</h3>
-
-      <p>
-        Luxury Representation Without Compromise.
-      </p>
-
-    </div>
-
-    <div className="footer-links">
-
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">How I Work</a>
-      <a href="#">Homes</a>
-      <a href="#">Consultation</a>
-
-    </div>
-
-  </div>
-
-  <div className="footer-divider"></div>
-
-  <div className="footer-bottom">
-
-    <div>
-      Michael Thomson | Real Broker, LLC
-    </div>
-
-    <div>
-      Serving The Woodlands, Conroe, Kingwood & Montgomery County
-    </div>
-
-    <div>
-      © 2026 MGT Estates. All Rights Reserved.
-    </div>
-
-  </div>
-
-</footer>
     </>
   );
 }
