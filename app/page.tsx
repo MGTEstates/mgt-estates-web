@@ -146,11 +146,11 @@ export default function Home() {
     <div className="fit-grid">
 
       <div className="fit-card">
-        <h3>Strategic Buyers</h3>
+        <h3>Primary Residence Buyers</h3>
       </div>
 
       <div className="fit-card">
-        <h3>Strategic Sellers</h3>
+        <h3>Home Sellers</h3>
       </div>
 
       <div className="fit-card">
