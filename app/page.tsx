@@ -14,9 +14,7 @@ export default function Home() {
           </h1>
 
           <p className="hero-subtitle">
-            Strategic real estate advisory for buyers,
-            sellers, and investors throughout The
-            Woodlands and Montgomery County.
+            Strategic real estate advisory for buyers, sellers, investors, and relocating professionals throughout The Woodlands and Montgomery County.
           </p>
 
           <a href="#" className="btn-primary">
@@ -49,18 +47,7 @@ export default function Home() {
       </h3>
 
       <p>
-        Luxury representation is not about selling homes.
-      </p>
-
-      <p>
-        It is about protecting leverage, reducing friction,
-        and helping clients make high-conviction decisions.
-      </p>
-
-      <p>
-        MGT Estates was built around a disciplined advisory
-        process focused on strategy, execution, and long-term
-        client outcomes.
+        Helping clients make high-conviction real estate decisions through preparation, analysis, and disciplined execution.
       </p>
 
       <a href="#" className="btn-primary">
@@ -85,9 +72,7 @@ export default function Home() {
     </h2>
 
     <p className="process-intro">
-      Every engagement begins with clarity, strategy,
-      and disciplined execution designed around the
-      client's specific objectives.
+      Consultation → Strategy → Execution → Close
     </p>
 
     <div className="process-grid">
@@ -161,7 +146,7 @@ export default function Home() {
     <div className="fit-grid">
 
       <div className="fit-card">
-        <h3>Luxury Buyers</h3>
+        <h3>Strategic Buyers</h3>
       </div>
 
       <div className="fit-card">
