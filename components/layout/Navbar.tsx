@@ -16,6 +16,10 @@ export default function Navbar() {
           <a href="/homes">Homes</a>
         </nav>
 
+        <a href="tel:+18324034664" className="navbar-phone">
+          (832) 403-4664
+        </a>
+
         <a href="/consultation" className="nav-button">
           Book Consultation
         </a>
@@ -23,6 +27,10 @@ export default function Navbar() {
         <button className="navbar-toggle" aria-label="Open menu">
           ☰
         </button>
+
+        <a href="tel:+18324034664" className="navbar-phone-mobile">
+          Call Now (832) 403-4664
+        </a>
 
       </div>
     </header>

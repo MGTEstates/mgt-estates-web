@@ -20,6 +20,9 @@ export default function Home() {
           <a href="#" className="btn-primary">
             Book A Consultation
           </a>
+          <p className="hero-contact">
+            Prefer a direct conversation? <a href="tel:+18324034664">(832) 403-4664</a>
+          </p>
         </div>
       </main>
       <section className="about-section">

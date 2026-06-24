@@ -73,6 +73,14 @@ export default function ConsultationPage() {
       </section>
 
       <section className="consultation-cta">
+        <div className="consultation-contact">
+          <h3>Schedule a Consultation</h3>
+          <p>
+            If you prefer to speak directly, call: <a href="tel:+18324034664">(832) 403-4664</a>
+            or complete the inquiry form below.
+          </p>
+        </div>
+
         <h2 className="cta-heading">
           Begin The Conversation.
         </h2>

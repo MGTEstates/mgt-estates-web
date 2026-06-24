@@ -9,6 +9,11 @@ export default function Footer() {
         <div className="footer-brand">
           <h3>MGT Estates</h3>
           <p>Luxury Representation Without Compromise.</p>
+          <p className="footer-contact">
+            <a href="tel:+18324034664">(832) 403-4664</a>
+            <br />
+            <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a>
+          </p>
         </div>
 
         <div className="footer-links">

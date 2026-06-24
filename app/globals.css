@@ -131,6 +131,18 @@ body {
   max-width: 1200px;
 }
 
+.hero-contact {
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.hero-contact a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .hero-eyebrow {
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -615,5 +627,36 @@ body {
 
   .footer-bottom > div, .footer-bottom span {
     display: block;
+  }
+}
+
+.footer-contact a {
+  color: #171717;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar-phone {
+  margin-left: 20px;
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar-phone-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-phone {
+    display: none;
+  }
+
+  .navbar-phone-mobile {
+    display: inline-block;
+    margin-left: 12px;
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 700;
   }
 }
