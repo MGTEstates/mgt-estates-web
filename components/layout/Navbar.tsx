@@ -20,6 +20,10 @@ export default function Navbar() {
           Book Consultation
         </a>
 
+        <button className="navbar-toggle" aria-label="Open menu">
+          ☰
+        </button>
+
       </div>
     </header>
   );
