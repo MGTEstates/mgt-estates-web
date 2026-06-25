@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import {
-  Geist,
+  Inter,
   Geist_Mono,
   Playfair_Display,
 } from "next/font/google";
@@ -10,8 +10,8 @@ import Footer from "../components/layout/Footer";
 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -30,6 +30,25 @@ export const metadata: Metadata = {
   description: "Luxury Representation Without Compromise.",
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  name: "MGT Estates",
+  url: "https://mgtestates.com",
+  email: "michael@mgtestates.com",
+  telephone: "+1-832-403-4664",
+  areaServed: [
+    "The Woodlands, TX",
+    "Montgomery County, TX",
+    "Conroe, TX",
+    "Kingwood, TX",
+  ],
+  sameAs: [
+    "https://instagram.com",
+    "https://linkedin.com",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,9 +57,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
+      className={`${inter.variable} ${geistMono.variable} ${playfair.variable}`}
     >
-      <body>  <Navbar />  <main>    {children}  </main>  <Footer /></body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
