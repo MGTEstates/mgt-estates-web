@@ -17,7 +17,7 @@ export default function Home() {
             Strategic real estate advisory for buyers, sellers, investors, and relocating professionals throughout The Woodlands and Montgomery County.
           </p>
 
-          <a href="#" className="btn-primary">
+          <a href="/consultation" className="btn-primary">
             Book A Consultation
           </a>
           <p className="hero-contact">
@@ -53,7 +53,7 @@ export default function Home() {
         Helping clients make high-conviction real estate decisions through preparation, analysis, and disciplined execution.
       </p>
 
-      <a href="#" className="btn-primary">
+      <a href="/consultation" className="btn-primary">
         Learn More
       </a>
 
@@ -192,7 +192,7 @@ export default function Home() {
       around your objectives, timeline, and market position.
     </p>
 
-    <a href="#" className="btn-primary">
+    <a href="/consultation" className="btn-primary">
       Book A Consultation
     </a>
 
