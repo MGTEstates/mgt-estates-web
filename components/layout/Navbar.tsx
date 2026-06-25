@@ -1,29 +1,62 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
+
+import HamburgerButton from "@/components/navigation/HamburgerButton";
+import NavigationDrawer from "@/components/navigation/NavigationDrawer";
+
 export default function Navbar() {
+  const pathname = usePathname();
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    setIsDrawerOpen(false);
+  }, [pathname]);
+
+  const openDrawer = useCallback(() => {
+    setIsDrawerOpen(true);
+  }, []);
+
+  const closeDrawer = useCallback(() => {
+    setIsDrawerOpen(false);
+  }, []);
+
+  const drawerId = "site-navigation-drawer";
+
   return (
     <header className="navbar">
       <div className="navbar-container">
 
-        <a href="/" className="logo">
+        <Link href="/" className="logo">
           MGT ESTATES
-        </a>
+        </Link>
 
         <nav className="nav-links">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/how-i-work">How I Work</a>
-          <a href="/homes">Homes</a>
+          <Link href="/" aria-current={pathname === "/" ? "page" : undefined}>Home</Link>
+          <Link href="/about" aria-current={pathname === "/about" ? "page" : undefined}>About</Link>
+          <Link href="/how-i-work" aria-current={pathname === "/how-i-work" ? "page" : undefined}>How I Work</Link>
+          <Link href="/homes" aria-current={pathname === "/homes" ? "page" : undefined}>Homes</Link>
         </nav>
 
 
-        <a href="/consultation" className="nav-button">
+        <Link href="/consultation" className="nav-button">
           Book Consultation
-        </a>
+        </Link>
 
-        <button className="navbar-toggle" aria-label="Open menu">
-          ☰
-        </button>
+        <HamburgerButton
+          isOpen={isDrawerOpen}
+          onClick={isDrawerOpen ? closeDrawer : openDrawer}
+          controlsId={drawerId}
+        />
+
+        <NavigationDrawer
+          isOpen={isDrawerOpen}
+          onClose={closeDrawer}
+          controlsId={drawerId}
+          currentPath={pathname}
+        />
 
         {/* phone moved to hero/footer/consultation per design — keep navbar minimal */}
 
