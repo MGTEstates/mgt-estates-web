@@ -58,8 +58,7 @@ export default function ConsultationForm() {
       } else {
         setSubmitError(result.error || 'An error occurred. Please try again.');
       }
-    } catch (error) {
-      console.error('Form submission error:', error);
+    } catch {
       setSubmitError('An unexpected error occurred. Please try again.');
     } finally {
       setIsSubmitting(false);

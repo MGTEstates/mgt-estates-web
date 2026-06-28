@@ -3,6 +3,21 @@ html {
   overflow-x: hidden;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 :root {
   --navy: #162434;
   --text: #171717;
@@ -23,7 +38,7 @@ body {
 }
 
 .hero-title {
-  font-family: var(--font-playfair);
+  font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
 }
 
 .navbar {

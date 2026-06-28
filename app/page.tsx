@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { createPageMetadata } from "@/lib/seo";
 
@@ -28,9 +29,9 @@ export default function Home() {
             Strategic real estate advisory for buyers, sellers, investors, and relocating professionals throughout The Woodlands and Montgomery County.
           </p>
 
-          <a href="/consultation" className="btn-primary">
+          <Link href="/consultation" className="btn-primary">
             Book A Consultation
-          </a>
+          </Link>
           <p className="hero-contact">
             Questions before scheduling? Call or text <a href="tel:+18324034664">(832) 403-4664</a>
           </p>
@@ -42,10 +43,11 @@ export default function Home() {
     <div className="about-image">
       <Image
         src="/images/michael-thomson.jpg"
-        alt="Michael Thomson"
+        alt="Michael Thomson, Principal of MGT Estates"
         width={2048}
         height={1638}
         sizes="(max-width: 768px) 100vw, 500px"
+        loading="lazy"
       />
     </div>
 
@@ -67,9 +69,9 @@ export default function Home() {
         Helping clients make high-conviction real estate decisions through preparation, analysis, and disciplined execution.
       </p>
 
-      <a href="/consultation" className="btn-primary">
+      <Link href="/consultation" className="btn-primary">
         Learn More
-      </a>
+      </Link>
 
     </div>
 
@@ -206,9 +208,9 @@ export default function Home() {
       around your objectives, timeline, and market position.
     </p>
 
-    <a href="/consultation" className="btn-primary">
+    <Link href="/consultation" className="btn-primary">
       Book A Consultation
-    </a>
+    </Link>
 
   </div>
 

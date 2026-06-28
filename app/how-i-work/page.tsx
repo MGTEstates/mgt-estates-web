@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -159,7 +161,7 @@ export default function HowIWorkPage() {
             Buyers, sellers, investors, and relocation clients begin with a
             private consultation focused on objectives rather than transactions.
           </p>
-          <a href="/consultation" className="btn-primary">Schedule A Strategy Consultation</a>
+          <Link href="/consultation" className="btn-primary">Schedule A Strategy Consultation</Link>
         </div>
       </section>
     </main>

@@ -35,7 +35,7 @@ export async function submitConsultationForm(formData: unknown) {
     // RESEND EMAIL SENDING
     // FUTURE: Replace this entire block with GoHighLevel CRM API call
     // The validated data structure remains the same, only the API integration changes
-    const { error, data } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'noreply@mgtestates.com',
       to: process.env.CONSULTATION_EMAIL || 'michael@mgtestates.com',
       subject: `New Consultation Request — ${validatedData.firstName} ${validatedData.lastName}`,
@@ -43,31 +43,21 @@ export async function submitConsultationForm(formData: unknown) {
     });
 
     if (error) {
-      console.error('Email sending error:', JSON.stringify(error, null, 2));
-      console.error('Error type:', typeof error);
-      console.error('Error keys:', Object.keys(error));
-      console.error('Full error object:', error);
       return {
         success: false,
         error: 'Failed to send consultation request. Please try again later.',
       };
     }
 
-    // Email sent successfully
-    console.log('Consultation email sent successfully:', data);
     return {
       success: true,
       message: 'Consultation request submitted successfully.',
     };
   } catch (error) {
-    console.error('Consultation submission error:', error);
-    
     if (error instanceof Error) {
-      console.error('Error message:', error.message);
-      console.error('Error stack:', error.stack);
       return {
         success: false,
-        error: error.message || 'An error occurred. Please try again.',
+        error: 'An error occurred. Please try again.',
       };
     }
 

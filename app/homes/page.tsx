@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -20,7 +22,7 @@ export default function HomesPage() {
             intelligence, relationships, negotiation strategy, and disciplined
             execution.
           </p>
-          <a href="/consultation" className="btn-primary">Schedule A Private Consultation</a>
+          <Link href="/consultation" className="btn-primary">Schedule A Private Consultation</Link>
         </div>
       </section>
 
@@ -177,7 +179,7 @@ export default function HomesPage() {
             Schedule a private consultation to define your objectives, evaluate
             timing, and build a strategy before the right opportunity appears.
           </p>
-          <a href="/consultation" className="btn-primary">Schedule A Private Consultation</a>
+          <Link href="/consultation" className="btn-primary">Schedule A Private Consultation</Link>
         </div>
       </section>
     </main>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { createPageMetadata } from "@/lib/seo";
 
@@ -11,7 +12,7 @@ export const metadata = createPageMetadata({
 
 export default function AboutPage() {
   return (
-    <>
+    <main>
       <section className="about-hero">
 
         <div className="about-hero-container">
@@ -46,10 +47,11 @@ export default function AboutPage() {
 
       <Image
         src="/images/michael-thomson.jpg"
-        alt="Michael Thomson"
+        alt="Michael Thomson, Principal of MGT Estates"
         width={2048}
         height={1638}
         sizes="(max-width: 768px) 100vw, 520px"
+        loading="lazy"
       />
 
     </div>
@@ -243,9 +245,9 @@ export default function AboutPage() {
     <h2>Begin with clarity.</h2>
     <p>Every strong real estate decision starts with a private conversation, disciplined thinking, and an intentional process.</p>
     <p>Let’s discuss the path forward and build an approach that feels purposeful, thoughtful, and enduring.</p>
-    <a href="/consultation" className="btn-primary">Start the conversation</a>
+    <Link href="/consultation" className="btn-primary">Start the conversation</Link>
   </div>
 </section>
-    </>
+    </main>
   );
 }

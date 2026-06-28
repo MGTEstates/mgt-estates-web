@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import {
   Inter,
-  Geist_Mono,
   Playfair_Display,
 } from "next/font/google";
 
@@ -15,16 +14,16 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: "swap",
+  preload: true,
+  fallback: ["Georgia", "Times New Roman", "serif"],
 });
 
 export const metadata: Metadata = {
@@ -112,7 +111,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${geistMono.variable} ${playfair.variable}`}
+      className={`${inter.variable} ${playfair.variable}`}
     >
       <body>
         <script
@@ -120,7 +119,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <Navbar />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
