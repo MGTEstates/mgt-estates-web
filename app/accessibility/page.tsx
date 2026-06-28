@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Accessibility Statement | MGT Estates",
+export const metadata = createPageMetadata({
+  title: "Accessibility Statement",
   description:
     "Accessibility commitment and support information for the MGT Estates website.",
-};
+  path: "/accessibility",
+});
 
 export default function AccessibilityPage() {
   return (

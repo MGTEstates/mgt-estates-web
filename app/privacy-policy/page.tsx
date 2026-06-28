@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | MGT Estates",
+export const metadata = createPageMetadata({
+  title: "Privacy Policy",
   description:
     "Learn how MGT Estates collects, uses, and protects personal information.",
-};
+  path: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
   return (

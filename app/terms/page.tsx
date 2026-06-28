@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions | MGT Estates",
+export const metadata = createPageMetadata({
+  title: "Terms & Conditions",
   description:
     "Terms governing use of the MGT Estates website and informational content.",
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

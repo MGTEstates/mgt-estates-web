@@ -1,3 +1,14 @@
+import Image from "next/image";
+
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "About Michael Thomson",
+  description:
+    "Learn how MGT Estates supports buyers, sellers, and investors with preparation, discretion, and disciplined execution.",
+  path: "/about",
+});
+
 export default function AboutPage() {
   return (
     <>
@@ -33,9 +44,12 @@ export default function AboutPage() {
 
     <div className="about-story-image">
 
-      <img
+      <Image
         src="/images/michael-thomson.jpg"
         alt="Michael Thomson"
+        width={2048}
+        height={1638}
+        sizes="(max-width: 768px) 100vw, 520px"
       />
 
     </div>

@@ -1,3 +1,12 @@
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "How I Work",
+  description:
+    "See the structured advisory process MGT Estates uses to guide buyers, sellers, investors, and relocation clients.",
+  path: "/how-i-work",
+});
+
 export default function HowIWorkPage() {
   return (
     <main className="how-i-work-page">

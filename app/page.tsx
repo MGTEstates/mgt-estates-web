@@ -1,3 +1,14 @@
+import Image from "next/image";
+
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Luxury Representation Without Compromise",
+  description:
+    "Luxury real estate advisory for buyers, sellers, investors, and relocation clients throughout The Woodlands and Montgomery County.",
+  path: "/",
+});
+
 export default function Home() {
   return (
     <>
@@ -29,9 +40,12 @@ export default function Home() {
   <div className="about-grid">
 
     <div className="about-image">
-      <img
+      <Image
         src="/images/michael-thomson.jpg"
         alt="Michael Thomson"
+        width={2048}
+        height={1638}
+        sizes="(max-width: 768px) 100vw, 500px"
       />
     </div>
 

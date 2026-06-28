@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Inter,
   Geist_Mono,
@@ -7,6 +7,8 @@ import {
 
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+
+import { siteConfig } from "@/lib/seo";
 
 import "./globals.css";
 
@@ -26,15 +28,68 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "MGT Estates",
-  description: "Luxury Representation Without Compromise.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: "/",
+    siteName: siteConfig.name,
+    type: "website",
+    images: [
+      {
+        url: siteConfig.socialImage,
+        width: 2048,
+        height: 1638,
+        alt: `${siteConfig.name} luxury real estate advisory`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.socialImage,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f7f7f5" },
+    { media: "(prefers-color-scheme: dark)", color: "#162434" },
+  ],
+  colorScheme: "light",
 };
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  name: "MGT Estates",
-  url: "https://mgtestates.com",
+  name: siteConfig.name,
+  url: siteConfig.url,
   email: "michael@mgtestates.com",
   telephone: "+1-832-403-4664",
   areaServed: [

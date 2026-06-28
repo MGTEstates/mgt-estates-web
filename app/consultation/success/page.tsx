@@ -1,9 +1,14 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-export const metadata = {
-  title: 'Consultation Request Received | MGT Estates',
-  description: 'Your consultation request has been received and will be reviewed shortly.',
-};
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Consultation Request Received",
+  description:
+    "Your consultation request has been received and will be reviewed shortly.",
+  path: "/consultation/success",
+  noIndex: true,
+});
 
 export default function ConsultationSuccessPage() {
   return (

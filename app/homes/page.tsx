@@ -1,3 +1,12 @@
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Homes",
+  description:
+    "Strategic home buying guidance for clients who want better timing, positioning, and negotiation outcomes in Montgomery County.",
+  path: "/homes",
+});
+
 export default function HomesPage() {
   return (
     <main className="homes-page">

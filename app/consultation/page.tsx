@@ -1,9 +1,13 @@
-import ConsultationForm from '@/components/forms/ConsultationForm';
+import ConsultationForm from "@/components/forms/ConsultationForm";
 
-export const metadata = {
-  title: 'Schedule A Private Consultation | MGT Estates',
-  description: 'Schedule a consultation to discuss your real estate objectives and strategy.',
-};
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Schedule A Private Consultation",
+  description:
+    "Schedule a consultation to discuss your real estate objectives, timeline, and strategy.",
+  path: "/consultation",
+});
 
 export default function ConsultationPage() {
   return (
