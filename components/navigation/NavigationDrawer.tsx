@@ -7,7 +7,6 @@ interface NavigationDrawerProps {
   isOpen: boolean;
   onClose: () => void;
   controlsId: string;
-  currentPath: string;
 }
 
 const NAV_LINKS = [
@@ -25,7 +24,6 @@ export default function NavigationDrawer({
   isOpen,
   onClose,
   controlsId,
-  currentPath,
 }: NavigationDrawerProps) {
   const panelRef = useRef<HTMLElement | null>(null);
 
@@ -110,10 +108,8 @@ export default function NavigationDrawer({
     }
   };
 
-  const handleDrawerLinkClick = (href: string) => {
-    if (currentPath === href) {
-      onClose();
-    }
+  const handleDrawerLinkClick = () => {
+    onClose();
   };
 
   return (
@@ -135,15 +131,12 @@ export default function NavigationDrawer({
       >
         <nav className="nav-drawer-links" aria-label="Primary">
           {NAV_LINKS.map((link) => {
-            const isActive = currentPath === link.href;
-
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={() => handleDrawerLinkClick(link.href)}
-                className={`nav-drawer-link${isActive ? " is-active" : ""}`}
-                aria-current={isActive ? "page" : undefined}
+                onClick={handleDrawerLinkClick}
+                className="nav-drawer-link"
               >
                 {link.label}
               </Link>
@@ -161,7 +154,7 @@ export default function NavigationDrawer({
           <Link
             href="/consultation"
             className="btn-primary"
-            onClick={() => handleDrawerLinkClick("/consultation")}
+            onClick={handleDrawerLinkClick}
           >
             Book Consultation
           </Link>
