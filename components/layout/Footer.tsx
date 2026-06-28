@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="footer-compliance-links">
           <a
             className="footer-compliance-link"
-            href="/disclosures/Information%20About%20Brokerage%20Services.pdf"
+            href="/disclosures/information-about-brokerage-services.pdf"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -67,7 +67,7 @@ export default function Footer() {
           </span>
           <a
             className="footer-compliance-link"
-            href="/disclosures/Texas%20Consumer%20Protection%20Notice.pdf"
+            href="/disclosures/texas-consumer-protection-notice.pdf"
             target="_blank"
             rel="noreferrer noopener"
           >
