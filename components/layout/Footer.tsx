@@ -44,17 +44,36 @@ export default function Footer() {
       </div>
 
       <div className="footer-disclosures" aria-label="Real estate disclosures">
-        <p>
+        <p className="footer-disclosure-copy">
           Real estate services are subject to Texas law and brokerage
           regulations. Information on this website is for general informational
           purposes and is not a guarantee of future market performance.
         </p>
-        <p>
-          Texas disclosures required for production launch:
-          <span> [TREC Consumer Protection Notice URL Placeholder]</span>
-          <span> [IABS Form URL Placeholder]</span>
-          <span> [Brokerage License Number Placeholder]</span>
-        </p>
+        <div className="footer-compliance-meta">
+          <p>Michael Thomson, Texas Real Estate Sales Agent License No. 3951441</p>
+          <p>Real Broker, LLC License No. 9003138</p>
+        </div>
+        <div className="footer-compliance-links">
+          <a
+            className="footer-compliance-link"
+            href="/disclosures/Information%20About%20Brokerage%20Services.pdf"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Information About Brokerage Services (IABS)
+          </a>
+          <span className="footer-compliance-divider" aria-hidden="true">
+            │
+          </span>
+          <a
+            className="footer-compliance-link"
+            href="/disclosures/Texas%20Consumer%20Protection%20Notice.pdf"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Texas Consumer Protection Notice
+          </a>
+        </div>
       </div>
 
       <div className="footer-divider"></div>
