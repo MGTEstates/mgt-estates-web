@@ -70,7 +70,7 @@ export default function Home() {
       </p>
 
       <Link href="/consultation" className="btn-primary">
-        Learn More
+        Book a consultation
       </Link>
 
     </div>
