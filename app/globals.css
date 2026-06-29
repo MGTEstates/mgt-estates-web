@@ -118,7 +118,7 @@ body {
 
 .navbar-toggle {
   position: relative;
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 44px;
@@ -190,7 +190,7 @@ body {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.28s ease, visibility 0s linear 0.28s;
-  z-index: 1300;
+  z-index: 2000;
 }
 
 .nav-drawer-backdrop.is-open {
@@ -218,6 +218,42 @@ body {
   padding: 110px 34px 28px;
   box-sizing: border-box;
   overflow-y: auto;
+  z-index: 2001;
+}
+
+.nav-drawer-close {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d7d7d7;
+  background: #ffffff;
+  color: #171717;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.nav-drawer-close .navbar-toggle-lines span:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+
+.nav-drawer-close .navbar-toggle-lines span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-drawer-close .navbar-toggle-lines span:nth-child(3) {
+  top: 5px;
+  transform: rotate(-45deg);
+}
+
+.nav-drawer-close:hover {
+  border-color: #bdbdbd;
 }
 
 .nav-drawer-panel.is-open {
@@ -304,14 +340,20 @@ body {
     padding: 0 24px;
   }
 
+  .navbar-toggle {
+    display: inline-flex;
+  }
+
   .nav-links,
   .nav-button {
     display: none;
   }
 
   .nav-drawer-panel {
-    width: 90vw;
-    padding: 92px 22px 22px;
+    width: 100vw;
+    max-width: 100vw;
+    border-left: none;
+    padding: 98px 22px 22px;
   }
 
   .nav-drawer-link {

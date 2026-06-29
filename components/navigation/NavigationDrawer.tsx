@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 interface NavigationDrawerProps {
   isOpen: boolean;
@@ -25,7 +26,12 @@ export default function NavigationDrawer({
   onClose,
   controlsId,
 }: NavigationDrawerProps) {
+  const [isMounted, setIsMounted] = useState(false);
   const panelRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!isOpen) {
@@ -112,7 +118,12 @@ export default function NavigationDrawer({
     onClose();
   };
 
-  return (
+  if (!isMounted) {
+    return null;
+  }
+
+  return createPortal(
+    (
     <div
       className={`nav-drawer-backdrop${isOpen ? " is-open" : ""}`}
       aria-hidden={!isOpen}
@@ -129,6 +140,19 @@ export default function NavigationDrawer({
         aria-label="Site navigation"
         tabIndex={-1}
       >
+        <button
+          type="button"
+          className="nav-drawer-close"
+          aria-label="Close menu"
+          onClick={onClose}
+        >
+          <span className="navbar-toggle-lines" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
+        </button>
+
         <nav className="nav-drawer-links" aria-label="Primary">
           {NAV_LINKS.map((link) => {
             return (
@@ -161,5 +185,7 @@ export default function NavigationDrawer({
         </div>
       </aside>
     </div>
+    ),
+    document.body
   );
 }
