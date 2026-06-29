@@ -22,11 +22,7 @@ export default function AboutPage() {
           </p>
 
           <h1 className="about-hero-title">
-            Representation
-            <br />
-            Built On
-            <br />
-            Preparation.
+            Representation Built On Preparation.
           </h1>
 
           <p className="about-hero-copy">

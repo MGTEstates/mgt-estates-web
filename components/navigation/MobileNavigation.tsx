@@ -8,7 +8,12 @@ import NavigationDrawer from "@/components/navigation/NavigationDrawer";
 
 export default function MobileNavigation() {
   const pathname = usePathname();
+  const [isMounted, setIsMounted] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     setIsDrawerOpen(false);
@@ -30,11 +35,13 @@ export default function MobileNavigation() {
         controlsId="site-navigation-drawer"
       />
 
-      <NavigationDrawer
-        isOpen={isDrawerOpen}
-        onClose={closeDrawer}
-        controlsId="site-navigation-drawer"
-      />
+      {isMounted ? (
+        <NavigationDrawer
+          isOpen={isDrawerOpen}
+          onClose={closeDrawer}
+          controlsId="site-navigation-drawer"
+        />
+      ) : null}
     </>
   );
 }
