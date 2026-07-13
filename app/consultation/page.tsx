@@ -25,7 +25,7 @@ export default function ConsultationPage() {
 
       <section className="consultation-form-section">
         <div className="consultation-form-container">
-          <ConsultationForm />
+          <ConsultationForm successRedirectPath="/consultation/schedule" />
         </div>
       </section>
     </main>

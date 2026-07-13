@@ -350,8 +350,10 @@ body {
   }
 
   .nav-drawer-panel {
-    width: 100vw;
-    max-width: 100vw;
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: none;
     border-left: none;
     padding: 98px 22px 22px;
   }
@@ -1528,6 +1530,89 @@ body {
   margin: 0 auto;
 }
 
+.consultation-schedule-page {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.consultation-schedule-intro {
+  padding: 152px 40px 68px;
+}
+
+.consultation-schedule-intro-copy {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.consultation-schedule-intro-copy h1 {
+  font-family: var(--font-playfair);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 0.98;
+  margin: 20px 0 22px;
+}
+
+.consultation-schedule-intro-copy p {
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 1.16rem;
+  line-height: 1.9;
+  color: #555;
+}
+
+.consultation-schedule-calendar-section {
+  padding: 0 40px 160px;
+}
+
+.consultation-schedule-calendar-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  border: 1px solid #d8dee5;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 30px 30px 42px;
+}
+
+.consultation-schedule-calendar-shell {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  border: 1px solid #e1e6eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.consultation-schedule-calendar-iframe {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 860px;
+  border: none;
+  overflow: hidden;
+  display: block;
+}
+
+.consultation-schedule-fallback {
+  margin-top: 26px;
+  font-size: 0.97rem;
+  line-height: 1.8;
+  color: #5a5a5a;
+}
+
+.consultation-schedule-fallback a {
+  color: #162434;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(22, 36, 52, 0.3);
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.consultation-schedule-fallback a:hover {
+  border-bottom-color: #162434;
+  opacity: 0.8;
+}
+
 .consultation-success-page {
   background: var(--bg);
   color: var(--text);
@@ -1573,6 +1658,35 @@ body {
 
   .consultation-form-section {
     padding: 80px 24px 100px;
+  }
+
+  .consultation-schedule-intro {
+    padding: 96px 24px 52px;
+  }
+
+  .consultation-schedule-intro-copy h1 {
+    font-size: clamp(2.3rem, 9vw, 3rem);
+  }
+
+  .consultation-schedule-intro-copy p {
+    font-size: 1.04rem;
+  }
+
+  .consultation-schedule-calendar-section {
+    padding: 0 24px 110px;
+  }
+
+  .consultation-schedule-calendar-container {
+    padding: 18px 18px 28px;
+  }
+
+  .consultation-schedule-calendar-iframe {
+    min-height: 760px;
+  }
+
+  .consultation-schedule-fallback {
+    margin-top: 20px;
+    font-size: 0.94rem;
   }
 
   .consultation-success-section {

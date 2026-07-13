@@ -24,6 +24,10 @@ type ConsultationFormData = {
 
 type ValidationErrors = Partial<Record<keyof ConsultationFormData, string>>;
 
+interface ConsultationFormProps {
+  successRedirectPath?: string;
+}
+
 const howCanIHelpOptions = [
   { value: 'buying', label: 'Buying' },
   { value: 'selling', label: 'Selling' },
@@ -41,7 +45,9 @@ const timelineOptions = [
   { value: 'researching', label: 'Researching' },
 ];
 
-export default function ConsultationForm() {
+export default function ConsultationForm({
+  successRedirectPath = '/consultation/success',
+}: ConsultationFormProps) {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -150,7 +156,7 @@ export default function ConsultationForm() {
 
       if (result.success) {
         formElement.reset();
-        router.push('/consultation/success');
+        router.push(successRedirectPath);
       } else {
         setSubmitError(result.error || 'An error occurred. Please try again.');
       }
