@@ -1,18 +1,3 @@
-import type { ConsultationFormData } from '@/lib/validations/consultation';
-
-export interface ConsultationRequest extends ConsultationFormData {
-  submittedAt: string;
-  source: 'website-consultation';
-}
-
-export interface ConsultationSubmissionResult {
-  success: boolean;
-  message?: string;
-  error?: string;
-  contactId?: string;
-  opportunityId?: string;
-}
-
 export interface CRMCustomFieldValue {
   id: string;
   value: string;
@@ -24,7 +9,7 @@ export interface CRMContactInput {
   lastName: string;
   email: string;
   phone: string;
-  source: string;
+  source?: string;
   customFields?: CRMCustomFieldValue[];
 }
 
@@ -37,7 +22,7 @@ export interface CRMOpportunityInput {
   status: 'open' | 'won' | 'lost' | 'abandoned' | 'all';
 }
 
-export interface GHLContact {
+export interface CRMContact {
   id: string;
   locationId: string;
   firstName?: string;
@@ -47,7 +32,7 @@ export interface GHLContact {
   source?: string;
 }
 
-export interface GHLOpportunity {
+export interface CRMOpportunity {
   id: string;
   locationId: string;
   contactId: string;
@@ -57,28 +42,10 @@ export interface GHLOpportunity {
   name?: string;
 }
 
-export interface GHLWorkflow {
-  id: string;
-  name?: string;
-}
-
-export interface GHLTag {
-  id: string;
-  name?: string;
-}
-
-export interface CRMSyncResult {
-  success: true;
-  skipped: boolean;
-  submissionKey: string;
-  contactId?: string;
-  opportunityId?: string;
-}
-
 export interface CRMProvider {
-  createOrUpdateContact(input: CRMContactInput): Promise<GHLContact>;
-  updateCustomFields(contactId: string, fields: CRMCustomFieldValue[]): Promise<GHLContact>;
+  createOrUpdateContact(input: CRMContactInput): Promise<CRMContact>;
+  updateCustomFields(contactId: string, fields: CRMCustomFieldValue[]): Promise<CRMContact>;
   applyTags(contactId: string, tagIds: string[]): Promise<void>;
-  createOpportunity(input: CRMOpportunityInput): Promise<GHLOpportunity>;
+  createOpportunity(input: CRMOpportunityInput): Promise<CRMOpportunity>;
   triggerWorkflow(contactId: string, workflowId: string): Promise<void>;
 }

@@ -1,4 +1,4 @@
-import ConsultationForm from "@/components/forms/ConsultationForm";
+import SchedulingCalendarEmbed from '@/components/consultation/SchedulingCalendarEmbed';
 
 import { createPageMetadata } from "@/lib/seo";
 
@@ -23,9 +23,24 @@ export default function ConsultationPage() {
         </div>
       </section>
 
-      <section className="consultation-form-section">
-        <div className="consultation-form-container">
-          <ConsultationForm successRedirectPath="/consultation/schedule" />
+      <section className="consultation-booking-section">
+        <div className="consultation-transition" aria-hidden="true">
+          <span />
+        </div>
+
+        <div className="consultation-schedule-calendar-container">
+          <SchedulingCalendarEmbed />
+
+          <p className="consultation-schedule-fallback">
+            Having trouble scheduling online?{' '}
+            <a
+              href="https://api.leadconnectorhq.com/widget/bookings/mgt-estates-consultation"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open the scheduling page in a new tab
+            </a>
+          </p>
         </div>
       </section>
     </main>

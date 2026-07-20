@@ -1,26 +1,18 @@
 import type {
+  CRMContact,
   CRMContactInput,
   CRMCustomFieldValue,
+  CRMOpportunity,
   CRMOpportunityInput,
   CRMProvider,
-  GHLContact,
-  GHLOpportunity,
 } from './provider';
 
 interface GHLContactResponse {
-  contact: GHLContact;
+  contact: CRMContact;
 }
 
 interface GHLOpportunityResponse {
-  opportunity: GHLOpportunity;
-}
-
-interface GHLConfigCustomFieldIds {
-  howCanIHelp: string | null;
-  timeline: string | null;
-  preferredArea: string | null;
-  estimatedBudget: string | null;
-  goals: string | null;
+  opportunity: CRMOpportunity;
 }
 
 export interface GoHighLevelConfig {
@@ -32,7 +24,7 @@ export interface GoHighLevelConfig {
   calendarId: string | null;
   tagIds: string[];
   workflowIds: string[];
-  customFieldIds: GHLConfigCustomFieldIds;
+  customFieldIds: Record<string, string>;
 }
 
 export interface CRMRetryConfig {
@@ -110,11 +102,11 @@ export function getGoHighLevelConfig(): GoHighLevelConfig {
     tagIds: parseCsvList(process.env.GHL_TAG_IDS),
     workflowIds: parseCsvList(process.env.GHL_WORKFLOW_IDS),
     customFieldIds: {
-      howCanIHelp: getOptionalEnv('GHL_CF_HOW_CAN_I_HELP'),
-      timeline: getOptionalEnv('GHL_CF_TIMELINE'),
-      preferredArea: getOptionalEnv('GHL_CF_PREFERRED_AREA'),
-      estimatedBudget: getOptionalEnv('GHL_CF_ESTIMATED_BUDGET'),
-      goals: getOptionalEnv('GHL_CF_GOALS'),
+      howCanIHelp: getOptionalEnv('GHL_CF_HOW_CAN_I_HELP') || '',
+      timeline: getOptionalEnv('GHL_CF_TIMELINE') || '',
+      preferredArea: getOptionalEnv('GHL_CF_PREFERRED_AREA') || '',
+      estimatedBudget: getOptionalEnv('GHL_CF_ESTIMATED_BUDGET') || '',
+      goals: getOptionalEnv('GHL_CF_GOALS') || '',
     },
   };
 }
@@ -172,7 +164,7 @@ export class GoHighLevelProvider implements CRMProvider {
     return JSON.parse(rawText) as T;
   }
 
-  async createOrUpdateContact(input: CRMContactInput): Promise<GHLContact> {
+  async createOrUpdateContact(input: CRMContactInput): Promise<CRMContact> {
     const body = {
       locationId: input.locationId,
       firstName: input.firstName,
@@ -191,7 +183,7 @@ export class GoHighLevelProvider implements CRMProvider {
     return result.contact;
   }
 
-  async updateCustomFields(contactId: string, fields: CRMCustomFieldValue[]): Promise<GHLContact> {
+  async updateCustomFields(contactId: string, fields: CRMCustomFieldValue[]): Promise<CRMContact> {
     if (fields.length === 0) {
       const result = await this.request<GHLContactResponse>(`/contacts/${contactId}`, {
         method: 'GET',
@@ -219,7 +211,7 @@ export class GoHighLevelProvider implements CRMProvider {
     });
   }
 
-  async createOpportunity(input: CRMOpportunityInput): Promise<GHLOpportunity> {
+  async createOpportunity(input: CRMOpportunityInput): Promise<CRMOpportunity> {
     const result = await this.request<GHLOpportunityResponse>('/opportunities/', {
       method: 'POST',
       body: JSON.stringify({

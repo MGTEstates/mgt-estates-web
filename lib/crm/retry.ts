@@ -40,7 +40,7 @@ export async function withRetry<T>(
       if (attempt > 0) {
         logInfo({
           correlationId: context.correlationId,
-          event: 'crm.retry.attempt',
+          event: 'integration.retry.attempt',
           stage: context.operation,
           attempt,
         });
@@ -56,7 +56,7 @@ export async function withRetry<T>(
         if (retryable) {
           logWarn({
             correlationId: context.correlationId,
-            event: 'crm.retry.exhausted',
+            event: 'integration.retry.exhausted',
             stage: context.operation,
             attempts: attempt + 1,
             error: error instanceof Error ? error.message : String(error),
@@ -69,12 +69,13 @@ export async function withRetry<T>(
       const delayMs = calculateDelayMs(config.baseDelayMs, config.maxDelayMs, attempt);
       logWarn({
         correlationId: context.correlationId,
-        event: 'crm.retry.scheduled',
+        event: 'integration.retry.scheduled',
         stage: context.operation,
         attempt: attempt + 1,
         delayMs,
         error: error instanceof Error ? error.message : String(error),
       });
+
       await wait(delayMs);
     }
   }
