@@ -209,6 +209,7 @@ body {
   max-width: 90vw;
   min-width: 0;
   height: 100vh;
+  height: 100dvh;
   background: #ffffff;
   border-left: 1px solid #ececec;
   transform: translateX(100%);
@@ -262,7 +263,6 @@ body {
 
 .nav-drawer-links {
   display: grid;
-  border-top: 1px solid #ececec;
 }
 
 .nav-drawer-link {
@@ -314,6 +314,7 @@ body {
 .nav-drawer-cta {
   margin-top: auto;
   padding-top: 24px;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .nav-drawer-cta .btn-primary {

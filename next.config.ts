@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 500],
   },
   async headers() {
+    const isProd = process.env.NODE_ENV === "production";
+
     return [
       {
         source: "/images/(.*)",
@@ -32,15 +34,19 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      {
-        source: "/_next/static/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
+      ...(isProd
+        ? [
+            {
+              source: "/_next/static/(.*)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+          ]
+        : []),
       {
         source: "/(.*\\.(?:ico|png|svg|webp|avif|woff2?))",
         headers: [

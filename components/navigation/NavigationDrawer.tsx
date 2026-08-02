@@ -124,67 +124,67 @@ export default function NavigationDrawer({
 
   return createPortal(
     (
-    <div
-      className={`nav-drawer-backdrop${isOpen ? " is-open" : ""}`}
-      aria-hidden={!isOpen}
-      onMouseDown={handleBackdropMouseDown}
-      onClick={handleBackdropClick}
-    >
-      <aside
-        id={controlsId}
-        ref={panelRef}
-        className={`nav-drawer-panel${isOpen ? " is-open" : ""}`}
-        role="dialog"
-        aria-modal="true"
+      <div
+        className={`nav-drawer-backdrop${isOpen ? " is-open" : ""}`}
         aria-hidden={!isOpen}
-        aria-label="Site navigation"
-        tabIndex={-1}
+        onMouseDown={handleBackdropMouseDown}
+        onClick={handleBackdropClick}
       >
-        <button
-          type="button"
-          className="nav-drawer-close"
-          aria-label="Close menu"
-          onClick={onClose}
+        <aside
+          id={controlsId}
+          ref={panelRef}
+          className={`nav-drawer-panel${isOpen ? " is-open" : ""}`}
+          role="dialog"
+          aria-modal="true"
+          aria-hidden={!isOpen}
+          aria-label="Site navigation"
+          tabIndex={-1}
         >
-          <span className="navbar-toggle-lines" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </span>
-        </button>
-
-        <nav className="nav-drawer-links" aria-label="Primary">
-          {NAV_LINKS.map((link) => {
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={handleDrawerLinkClick}
-                className="nav-drawer-link"
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
-
-        <div className="nav-drawer-contact">
-          <p>Contact</p>
-          <a href="tel:+18324034664">(832) 403-4664</a>
-          <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a>
-        </div>
-
-        <div className="nav-drawer-cta">
-          <Link
-            href="/consultation"
-            className="btn-primary"
-            onClick={handleDrawerLinkClick}
+          <button
+            type="button"
+            className="nav-drawer-close"
+            aria-label="Close menu"
+            onClick={onClose}
           >
-            Book Consultation
-          </Link>
-        </div>
-      </aside>
-    </div>
+            <span className="navbar-toggle-lines" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </span>
+          </button>
+
+          <nav className="nav-drawer-links" aria-label="Primary">
+            {NAV_LINKS.map((link) => {
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={handleDrawerLinkClick}
+                  className="nav-drawer-link"
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
+
+          <div className="nav-drawer-contact">
+            <p>Contact</p>
+            <a href="tel:+18324034664">(832) 403-4664</a>
+            <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a>
+          </div>
+
+          <div className="nav-drawer-cta">
+            <Link
+              href="/consultation"
+              className="btn-primary"
+              onClick={handleDrawerLinkClick}
+            >
+              Book Consultation
+            </Link>
+          </div>
+        </aside>
+      </div>
     ),
     document.body
   );
