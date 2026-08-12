@@ -13,12 +13,13 @@ export default function TermsPage() {
       <section className="legal-container">
         <p className="section-label">Terms</p>
         <h1>Terms &amp; Conditions</h1>
-        <p className="legal-updated">Last updated: June 24, 2026</p>
+        <p className="legal-updated">Last updated: August 11, 2026</p>
 
         <p>
           These Terms &amp; Conditions ("Terms") govern your use of the MGT
-          Estates website. By accessing or using this website, you agree to
-          these Terms.
+          Estates website. MGT Estates is the consumer-facing brand of MGT
+          Solutions LLC ("MGT Solutions LLC," "we," "our," or "us"). By
+          accessing or using this website, you agree to these Terms.
         </p>
 
         <h2>Website Use</h2>
@@ -31,9 +32,26 @@ export default function TermsPage() {
         <h2>Intellectual Property</h2>
         <p>
           All content on this website, including copy, design, logos, images,
-          graphics, and layout, is owned by or licensed to MGT Estates unless
-          otherwise stated. Unauthorized copying, distribution, or commercial
-          use is prohibited.
+          graphics, and layout, is owned by or licensed to MGT Solutions LLC
+          unless otherwise stated. Unauthorized copying, distribution, or
+          commercial use is prohibited.
+        </p>
+
+        <h2>Communications and Text Messaging</h2>
+        <p>
+          By providing your phone number through our consultation booking form,
+          you consent to receive transactional text messages from MGT Estates
+          (operated by MGT Solutions LLC) related to your appointment, including
+          booking confirmations and reminders.
+        </p>
+        <p>
+          Message frequency varies. Message and data rates may apply.
+          Reply <strong>STOP</strong> to opt out at any time.
+          Reply <strong>HELP</strong> for assistance.
+        </p>
+        <p>
+          Consent to receive text messages is not a condition of any purchase,
+          service, or consultation engagement.
         </p>
 
         <h2>No Legal, Tax, or Financial Advice</h2>
@@ -68,16 +86,16 @@ export default function TermsPage() {
 
         <h2>Limitation of Liability</h2>
         <p>
-          To the fullest extent allowed by law, MGT Estates is not liable for
-          any direct, indirect, incidental, consequential, special, or punitive
-          damages arising from or related to your use of this website.
+          To the fullest extent allowed by law, MGT Solutions LLC is not liable
+          for any direct, indirect, incidental, consequential, special, or
+          punitive damages arising from or related to your use of this website.
         </p>
 
         <h2>Indemnification</h2>
         <p>
-          You agree to defend, indemnify, and hold harmless MGT Estates from
-          claims, liabilities, damages, and expenses arising from your misuse of
-          this website or violation of these Terms.
+          You agree to defend, indemnify, and hold harmless MGT Solutions LLC
+          from claims, liabilities, damages, and expenses arising from your
+          misuse of this website or violation of these Terms.
         </p>
 
         <h2>Governing Law</h2>
@@ -85,18 +103,6 @@ export default function TermsPage() {
           These Terms are governed by the laws of the State of Texas, without
           regard to conflict-of-law principles.
         </p>
-
-        <h2>Required Brokerage Disclosures for Launch</h2>
-        <p>
-          Add and maintain the following required links and brokerage details at
-          production launch:
-        </p>
-        <ul>
-          <li>TREC Consumer Protection Notice URL Placeholder</li>
-          <li>IABS (Information About Brokerage Services) URL Placeholder</li>
-          <li>Brokerage name and license number placeholder</li>
-          <li>Agent license number placeholder</li>
-        </ul>
 
         <h2>Changes to Terms</h2>
         <p>
@@ -107,6 +113,8 @@ export default function TermsPage() {
         <h2>Contact</h2>
         <p>
           Questions regarding these Terms:
+          <br />
+          MGT Estates (operated by MGT Solutions LLC)
           <br />
           <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a>
           <br />

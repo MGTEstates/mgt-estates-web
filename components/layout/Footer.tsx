@@ -79,7 +79,11 @@ export default function Footer() {
       <div className="footer-divider"></div>
 
       <div className="footer-bottom">
-        <span>© 2026 MGT Estates. All Rights Reserved.</span>
+        <span>
+          © 2026 MGT Solutions LLC. All Rights Reserved.
+          <br />
+          MGT Estates is the consumer-facing brand of MGT Solutions LLC.
+        </span>
         <span>Designed and developed by MGT Estates.</span>
       </div>
     </footer>

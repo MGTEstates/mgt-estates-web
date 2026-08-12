@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import SchedulingCalendarEmbed from '@/components/consultation/SchedulingCalendarEmbed';
 
 import { createPageMetadata } from "@/lib/seo";
@@ -41,6 +43,24 @@ export default function ConsultationPage() {
               Open the scheduling page in a new tab
             </a>
           </p>
+
+          <div className="consultation-sms-disclosure" role="note" aria-label="Messaging disclosure">
+            <p>
+              By submitting your phone number through this booking form, you consent to receive
+              transactional text messages from MGT Estates (operated by MGT Solutions LLC)
+              regarding your consultation appointment, including confirmations and reminders.
+              Message frequency varies. Message and data rates may apply.
+            </p>
+            <p>
+              Reply <strong>STOP</strong> to cancel. Reply <strong>HELP</strong> for help.
+              Consent is not a condition of any purchase or service.
+            </p>
+            <p>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+              <span className="consultation-sms-disclosure-divider" aria-hidden="true">│</span>
+              <Link href="/terms">Terms &amp; Conditions</Link>
+            </p>
+          </div>
         </div>
       </section>
     </main>

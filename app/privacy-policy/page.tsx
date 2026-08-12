@@ -13,12 +13,13 @@ export default function PrivacyPolicyPage() {
       <section className="legal-container">
         <p className="section-label">Privacy Policy</p>
         <h1>Privacy Policy</h1>
-        <p className="legal-updated">Last updated: June 24, 2026</p>
+        <p className="legal-updated">Last updated: August 11, 2026</p>
 
         <p>
-          MGT Estates ("MGT Estates," "we," "our," or "us") respects your
-          privacy. This Privacy Policy explains what information we collect,
-          how we use it, and what choices you have when using this website.
+          MGT Estates is the consumer-facing brand of MGT Solutions LLC
+          ("MGT Solutions LLC," "we," "our," or "us"). This Privacy Policy
+          explains what information we collect, how we use it, and what choices
+          you have when using this website.
         </p>
 
         <h2>Information We Collect</h2>
@@ -35,10 +36,44 @@ export default function PrivacyPolicyPage() {
         <ul>
           <li>Respond to consultation requests and client inquiries</li>
           <li>Deliver real estate advisory services</li>
+          <li>Send transactional communications, including appointment
+              confirmations and reminders</li>
           <li>Improve website performance, security, and usability</li>
           <li>Maintain records related to client communications</li>
           <li>Comply with legal and regulatory obligations</li>
         </ul>
+
+        <h2>Text Message Communications</h2>
+        <p>
+          When you provide your phone number through our consultation booking
+          form, you consent to receive transactional text messages from MGT
+          Estates (operated by MGT Solutions LLC) related to your appointment,
+          including booking confirmations and reminders.
+        </p>
+        <p>
+          Message frequency varies based on your consultation activity.
+          Message and data rates may apply.
+        </p>
+        <p>
+          <strong>To opt out:</strong> Reply <strong>STOP</strong> to any
+          text message at any time. You will receive one confirmation message
+          and no further messages will be sent.
+        </p>
+        <p>
+          <strong>For help:</strong> Reply <strong>HELP</strong> to any text
+          message or contact us at{' '}
+          <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a>.
+        </p>
+        <p>
+          Consent to receive text messages is not a condition of any purchase,
+          service, or consultation engagement.
+        </p>
+        <p>
+          Text messaging services are provided through GoHighLevel, a
+          third-party CRM and communications platform. Message delivery is
+          subject to carrier terms and conditions. We are not responsible for
+          delays or failures caused by carrier networks.
+        </p>
 
         <h2>Cookies and Similar Technologies</h2>
         <p>
@@ -85,8 +120,8 @@ export default function PrivacyPolicyPage() {
           <li>Withdraw consent where processing is consent-based</li>
         </ul>
         <p>
-          To make a request, contact us at
-          <a href="mailto:michael@mgtestates.com"> michael@mgtestates.com</a>.
+          To make a request, contact us at{' '}
+          <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a>.
         </p>
 
         <h2>Children's Privacy</h2>
@@ -112,7 +147,7 @@ export default function PrivacyPolicyPage() {
         <p>
           For privacy-related questions, contact:
           <br />
-          MGT Estates
+          MGT Estates (operated by MGT Solutions LLC)
           <br />
           <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a>
           <br />
