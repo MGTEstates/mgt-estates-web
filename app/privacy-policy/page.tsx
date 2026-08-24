@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
           <li>Messages or communication history with our team</li>
         </ul>
 
-        <h2>How We Use Information</h2>
+        <h2>How We Use Your Information</h2>
         <p>We use information to:</p>
         <ul>
           <li>Respond to consultation requests and client inquiries</li>
@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
           <li>Comply with legal and regulatory obligations</li>
         </ul>
 
-        <h2>Text Message Communications</h2>
+        <h2>SMS/Text Messaging Privacy</h2>
         <p>
           When you provide your phone number through our consultation booking
           form, you consent to receive transactional text messages from MGT
@@ -74,6 +74,8 @@ export default function PrivacyPolicyPage() {
           subject to carrier terms and conditions. We are not responsible for
           delays or failures caused by carrier networks.
         </p>
+
+        <h3>Mobile Information Sharing</h3>
         <p>
           SMS opt-in information and phone numbers collected for SMS
           communications are not shared, sold, rented, or disclosed to third
@@ -87,7 +89,7 @@ export default function PrivacyPolicyPage() {
           information for their own marketing or promotional purposes.
         </p>
 
-        <h2>Cookies and Similar Technologies</h2>
+        <h2>Cookies and Tracking Technologies</h2>
         <p>
           This website may use cookies and similar technologies to support site
           functionality, understand usage patterns, and improve performance. You
@@ -123,7 +125,7 @@ export default function PrivacyPolicyPage() {
           transmission or storage system is guaranteed to be fully secure.
         </p>
 
-        <h2>Your Rights and Choices</h2>
+        <h2>Your Privacy Rights</h2>
         <p>Depending on applicable law, you may request to:</p>
         <ul>
           <li>Access, update, or correct your personal information</li>

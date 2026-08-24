@@ -51,8 +51,14 @@ export default function TermsPage() {
           apply.
         </p>
         <p>
-          Reply <strong>STOP</strong> to opt out at any time. Reply
-          <strong> HELP</strong> for assistance.
+          You must be at least 18 years old to consent to receive text
+          messages from MGT Estates.
+        </p>
+        <p>
+          Text <strong>STOP</strong> to opt out at any time. Text
+          <strong> HELP</strong> for assistance. For direct support, contact
+          <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a> or
+          <a href="tel:+18324034664"> (832) 403-4664</a>.
         </p>
         <p>
           Carriers are not liable for delayed or undelivered messages.
