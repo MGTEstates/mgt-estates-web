@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
 
         <p>
           MGT Estates is the consumer-facing brand of MGT Solutions LLC
-          ("MGT Solutions LLC," "we," "our," or "us"). This Privacy Policy
+          (&quot;MGT Solutions LLC,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). This Privacy Policy
           explains what information we collect, how we use it, and what choices
           you have when using this website.
         </p>
@@ -74,6 +74,18 @@ export default function PrivacyPolicyPage() {
           subject to carrier terms and conditions. We are not responsible for
           delays or failures caused by carrier networks.
         </p>
+        <p>
+          SMS opt-in information and phone numbers collected for SMS
+          communications are not shared, sold, rented, or disclosed to third
+          parties or affiliates for their marketing or promotional purposes.
+        </p>
+        <p>
+          We may use trusted service providers, including CRM providers,
+          messaging delivery providers, and operational service providers, to
+          process information solely to support services performed on behalf of
+          MGT Estates. These providers are not permitted to use SMS opt-in
+          information for their own marketing or promotional purposes.
+        </p>
 
         <h2>Cookies and Similar Technologies</h2>
         <p>
@@ -124,7 +136,7 @@ export default function PrivacyPolicyPage() {
           <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a>.
         </p>
 
-        <h2>Children's Privacy</h2>
+        <h2>Children&apos;s Privacy</h2>
         <p>
           This website is not directed to children under 13, and we do not
           knowingly collect personal information from children.
@@ -139,7 +151,7 @@ export default function PrivacyPolicyPage() {
         <h2>Changes to This Policy</h2>
         <p>
           We may update this Privacy Policy from time to time. Any material
-          updates will be posted on this page with a revised "Last updated"
+          updates will be posted on this page with a revised &quot;Last updated&quot;
           date.
         </p>
 

@@ -44,23 +44,32 @@ export default function ConsultationPage() {
             </a>
           </p>
 
-          <div className="consultation-sms-disclosure" role="note" aria-label="Messaging disclosure">
+          <section className="consultation-sms-disclosure" aria-label="SMS program disclosure">
             <p>
-              By submitting your phone number through this booking form, you consent to receive
-              transactional text messages from MGT Estates (operated by MGT Solutions LLC)
-              regarding your consultation appointment, including confirmations and reminders.
-              Message frequency varies. Message and data rates may apply.
+              By providing your phone number through this booking form, you may receive text
+              messages from MGT Estates (operated by MGT Solutions LLC) related to your
+              consultation request and real estate services.
             </p>
-            <p>
-              Reply <strong>STOP</strong> to cancel. Reply <strong>HELP</strong> for help.
-              Consent is not a condition of any purchase or service.
-            </p>
+            <ul>
+              <li>
+                Message types may include appointment reminders, consultation confirmations,
+                property updates, and optional marketing communications.
+              </li>
+              <li>Message frequency varies.</li>
+              <li>Message and data rates may apply.</li>
+              <li>
+                Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for assistance.
+              </li>
+              <li>
+                SMS consent is optional and is not a condition of purchase or service.
+              </li>
+            </ul>
             <p>
               <Link href="/privacy-policy">Privacy Policy</Link>
               <span className="consultation-sms-disclosure-divider" aria-hidden="true">│</span>
               <Link href="/terms">Terms &amp; Conditions</Link>
             </p>
-          </div>
+          </section>
         </div>
       </section>
     </main>

@@ -16,9 +16,9 @@ export default function TermsPage() {
         <p className="legal-updated">Last updated: August 11, 2026</p>
 
         <p>
-          These Terms &amp; Conditions ("Terms") govern your use of the MGT
+          These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the MGT
           Estates website. MGT Estates is the consumer-facing brand of MGT
-          Solutions LLC ("MGT Solutions LLC," "we," "our," or "us"). By
+          Solutions LLC (&quot;MGT Solutions LLC,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By
           accessing or using this website, you agree to these Terms.
         </p>
 
@@ -40,18 +40,31 @@ export default function TermsPage() {
         <h2>Communications and Text Messaging</h2>
         <p>
           By providing your phone number through our consultation booking form,
-          you consent to receive transactional text messages from MGT Estates
-          (operated by MGT Solutions LLC) related to your appointment, including
-          booking confirmations and reminders.
+          you may opt in to receive SMS messages from MGT Estates (operated by
+          MGT Solutions LLC) related to your consultation request and real
+          estate services.
         </p>
         <p>
-          Message frequency varies. Message and data rates may apply.
-          Reply <strong>STOP</strong> to opt out at any time.
-          Reply <strong>HELP</strong> for assistance.
+          Message categories may include appointment reminders, consultation
+          confirmations, property updates, and optional marketing
+          communications. Message frequency varies. Message and data rates may
+          apply.
+        </p>
+        <p>
+          Reply <strong>STOP</strong> to opt out at any time. Reply
+          <strong> HELP</strong> for assistance.
+        </p>
+        <p>
+          Carriers are not liable for delayed or undelivered messages.
+        </p>
+        <p>
+          By opting in, you represent that you are the account holder or have
+          authority to provide consent for the mobile number submitted.
         </p>
         <p>
           Consent to receive text messages is not a condition of any purchase,
-          service, or consultation engagement.
+          service, or consultation engagement. For privacy-related information,
+          please review our <a href="/privacy-policy">Privacy Policy</a>.
         </p>
 
         <h2>No Legal, Tax, or Financial Advice</h2>
