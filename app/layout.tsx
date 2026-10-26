@@ -89,7 +89,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   name: siteConfig.name,
-  legalName: "MGT Solutions LLC",
+  legalName: "MGT Advisory Group LLC",
   url: siteConfig.url,
   email: "michael@mgtestates.com",
   telephone: "+1-832-403-4664",

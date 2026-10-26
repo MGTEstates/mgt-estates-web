@@ -13,12 +13,12 @@ export default function TermsPage() {
       <section className="legal-container">
         <p className="section-label">Terms</p>
         <h1>Terms &amp; Conditions</h1>
-        <p className="legal-updated">Last updated: August 11, 2026</p>
+        <p className="legal-updated">Last updated: October 25, 2026</p>
 
         <p>
           These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the MGT
           Estates website. MGT Estates is the consumer-facing brand of MGT
-          Solutions LLC (&quot;MGT Solutions LLC,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By
+          Advisory Group LLC (&quot;MGT Advisory Group LLC,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By
           accessing or using this website, you agree to these Terms.
         </p>
 
@@ -32,33 +32,40 @@ export default function TermsPage() {
         <h2>Intellectual Property</h2>
         <p>
           All content on this website, including copy, design, logos, images,
-          graphics, and layout, is owned by or licensed to MGT Solutions LLC
+          graphics, and layout, is owned by or licensed to MGT Advisory Group LLC
           unless otherwise stated. Unauthorized copying, distribution, or
           commercial use is prohibited.
         </p>
 
         <h2>Communications and Text Messaging</h2>
         <p>
-          By providing your phone number through our consultation booking form,
-          you may opt in to receive SMS messages from MGT Estates (operated by
-          MGT Solutions LLC) related to your consultation request and real
-          estate services.
+          Providing a phone number or booking a consultation does not, by
+          itself, give consent to receive text messages. If you choose to opt in
+          to text messages from MGT Estates (operated by MGT Advisory Group
+          LLC), you may receive messages about consultation scheduling,
+          appointment confirmations and reminders, and responses to your
+          inquiries.
         </p>
         <p>
-          Message categories may include appointment reminders, consultation
-          confirmations, property updates, and optional marketing
-          communications. Message frequency varies. Message and data rates may
-          apply.
+          Message frequency varies based on your scheduling activity and
+          inquiries. Message and data rates may apply for messages sent to you
+          and from you; contact your wireless provider with questions about
+          your plan. Property updates and marketing text messages are not part
+          of the messaging described above and are not sent under this consent
+          unless you separately opt in to them.
         </p>
         <p>
           You must be at least 18 years old to consent to receive text
           messages from MGT Estates.
         </p>
         <p>
-          Text <strong>STOP</strong> to opt out at any time. Text
-          <strong> HELP</strong> for assistance. For direct support, contact
-          <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a> or
-          <a href="tel:+18324034664"> (832) 403-4664</a>.
+          You can cancel text messages at any time by replying{' '}
+          <strong>STOP</strong>. After you send STOP, you will receive one
+          message confirming that you have been unsubscribed, and you will no
+          longer receive text messages from us. If you need assistance, reply{' '}
+          <strong>HELP</strong> or contact{' '}
+          <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a> or{' '}
+          <a href="tel:+18324034664">(832) 403-4664</a>.
         </p>
         <p>
           Carriers are not liable for delayed or undelivered messages.
@@ -68,9 +75,10 @@ export default function TermsPage() {
           authority to provide consent for the mobile number submitted.
         </p>
         <p>
-          Consent to receive text messages is not a condition of any purchase,
-          service, or consultation engagement. For privacy-related information,
-          please review our <a href="/privacy-policy">Privacy Policy</a>.
+          Consent to receive text messages is voluntary and is not a condition
+          of purchasing any services or of any consultation engagement. If you
+          have any questions regarding privacy, please read our{' '}
+          <a href="/privacy-policy">Privacy Policy</a>.
         </p>
 
         <h2>No Legal, Tax, or Financial Advice</h2>
@@ -105,14 +113,14 @@ export default function TermsPage() {
 
         <h2>Limitation of Liability</h2>
         <p>
-          To the fullest extent allowed by law, MGT Solutions LLC is not liable
+          To the fullest extent allowed by law, MGT Advisory Group LLC is not liable
           for any direct, indirect, incidental, consequential, special, or
           punitive damages arising from or related to your use of this website.
         </p>
 
         <h2>Indemnification</h2>
         <p>
-          You agree to defend, indemnify, and hold harmless MGT Solutions LLC
+          You agree to defend, indemnify, and hold harmless MGT Advisory Group LLC
           from claims, liabilities, damages, and expenses arising from your
           misuse of this website or violation of these Terms.
         </p>
@@ -133,7 +141,7 @@ export default function TermsPage() {
         <p>
           Questions regarding these Terms:
           <br />
-          MGT Estates (operated by MGT Solutions LLC)
+          MGT Estates (operated by MGT Advisory Group LLC)
           <br />
           <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a>
           <br />

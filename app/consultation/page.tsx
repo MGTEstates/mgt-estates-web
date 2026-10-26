@@ -46,22 +46,24 @@ export default function ConsultationPage() {
 
           <section className="consultation-sms-disclosure" aria-label="SMS program disclosure">
             <p>
-              By providing your phone number through this booking form, you may receive text
-              messages from MGT Estates (operated by MGT Solutions LLC) related to your
-              consultation request and real estate services.
+              Providing a phone number or booking a consultation does not, by itself, give consent
+              to receive text messages. If you choose to opt in to text messages from MGT Estates
+              (operated by MGT Advisory Group LLC), you may receive messages about consultation
+              scheduling, appointment confirmations and reminders, and responses to your inquiries.
+              This notice supplements, and does not replace, any consent options presented within
+              the scheduling form itself.
             </p>
             <ul>
-              <li>
-                Message types may include appointment reminders, consultation confirmations,
-                property updates, and optional marketing communications.
-              </li>
               <li>Message frequency varies.</li>
               <li>Message and data rates may apply.</li>
               <li>
                 Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for assistance.
+                You may also contact{' '}
+                <a href="mailto:michael@mgtestates.com">michael@mgtestates.com</a> or{' '}
+                <a href="tel:+18324034664">(832) 403-4664</a>.
               </li>
               <li>
-                SMS consent is optional and is not a condition of purchase or service.
+                SMS consent is optional and is not a condition of purchasing any services.
               </li>
             </ul>
             <p>
